@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CovidNews">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:id="@+id/idToolbar"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Covid News"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_marginEnd="15dp"
+                android:textStyle="bold"
+                ></TextView>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/News"
+        tools:listitem="@layout/news_card"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/idToolbar"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
